@@ -111,7 +111,7 @@ drawCanvas.addEventListener("mousedown", e => {
     if (!drawingMode) return;
     isDrawing = true;
     drawCtx.strokeStyle = "red";
-    drawCtx.lineWidth = 3;
+    drawCtx.lineWidth = 6;
     const pos = getMousePos(e, drawCanvas);
     drawCtx.beginPath();
     drawCtx.moveTo(pos.x, pos.y);
@@ -135,7 +135,9 @@ drawCanvas.addEventListener("click", e => {
     div.style.left = pos.x + "px";
     div.style.top = pos.y + "px";
     div.style.color = "red";
-    div.style.fontSize = "20px";
+    div.style.fontSize = "50px";
+    div.style.fontWeight = "bold";
+    div.style.fontFamily = '"Comic Sans MS", "Arial", sans-serif';
     div.textContent = text;
     textLayer.appendChild(div);
 });
